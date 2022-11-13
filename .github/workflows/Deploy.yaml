@@ -60,3 +60,9 @@ jobs:
       run: npm ci
     - name: Build Project
       run: npm run build
+    - name: get artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: dist-files
+    - name: output files
+      run: ls -alh
